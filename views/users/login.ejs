@@ -1,15 +1,26 @@
 <% layout('layouts/boilerplate')%>
-<h1>Login</h1>
-<form action="/login" method="POST" class="validated-form" novalidate>
-    <div class="mb-3">
-        <label class="form-label" for="username">Username</label>
-        <input class="form-control" type="text" name="username" id="username" required>
-        <div class="valid-feedback">Looks good!</div>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="col-md-6 mb-5 col-xl-4">
+        <div class="card shadow">
+            <img class="card-img-top" src="https://res.cloudinary.com/dnp23f1ju/image/upload/v1735503343/YelpCamp/mu7lkqejbduy5yrebdkm.jpg" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Login</h5>
+                <form action="/login" method="POST" class="validated-form" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="username">Username</label>
+                        <input class="form-control" type="text" name="username" id="username" autofocus required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="password">Password</label>
+                        <input class="form-control" type="password" name="password" id="password" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="d-grid gap-2">
+                    <button class="btn btn-success">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label class="form-label" for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="password" required>
-        <div class="valid-feedback">Looks good!</div>
-    </div>
-    <button class="btn btn-success">Login</button>
-</form>
+</div>

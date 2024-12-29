@@ -1,0 +1,56 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1559521783-1d1599583485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+.cover-container {
+  max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color:white;
+
+}
+
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+}
+.header-offset {
+    position: absolute; /* Remove the header from the normal document flow */
+    top: 10px;          /* Position it 10px from the top of the body */
+    left: 36%;            /* Start at the left edge of the page */
+    transform: translateX(20%); /* Move the header 20% of the page width to the right */
+    width: fit-content; /* Keep the width constrained to the content */
+    z-index: 10;        /* Ensure the header stays above other elements */
+}
+
+/* Add top padding to compensate for the header being taken out of the flow */
+main {
+    padding-top: 200px; /* Adjust as needed to give space below the header */
+}
+
+/* Add spacing between YelpCamp title and navigation links */
+.header-offset div {
+    display: flex;       /* Align items in a row */
+    align-items: center; /* Vertically center-align title and nav */
+    gap: 350px;           /* Add space between title and navigation links */
+}
