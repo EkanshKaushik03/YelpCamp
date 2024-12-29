@@ -3,6 +3,7 @@
 
 <div class="row mb-3">
     <div class="col-6">
+      <div id="map" style='width: 400px; height: 300px;'></div>
       <div id="campgroundCarousel" class="carousel slide">
         <div class="carousel-inner">
           <% campground.images.forEach((img,i) =>{ %>
@@ -96,3 +97,9 @@
         <% } %>
     </div>
 </div>
+
+<script>
+  campground = <%-JSON.stringify(campground)%>
+</script>
+
+<script src="/javascripts/showPageMap.js"></script>

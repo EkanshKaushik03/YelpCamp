@@ -10,7 +10,12 @@ module.exports.renderNewForm = (req,res) => {
     res.render('campgrounds/new');
 }
 module.exports.createCampground = async(req, res, next) => {
+    const geoData = req.body.campground.location;
+    const url = `https://nominatim.openstreetmap.org/search?format=geojson&q=${geoData}`;
+    const response = await fetch(url);
+    const data = await response.json();
     const campground = new Campground(req.body.campground);
+    campground.geometry = data.features[0].geometry
     campground.images = req.files.map(f => ({ url: f.path, filename: f.filename }))
     campground.author = req.user._id;
     await campground.save();
