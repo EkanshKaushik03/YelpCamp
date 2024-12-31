@@ -5,16 +5,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-// const markers = new L.MarkerClusterGroup();
-
-// campgrounds.forEach(campground => {
-//     if (campground.geometry && campground.geometry.coordinates) {
-//       const [lng, lat] = campground.geometry.coordinates
-//       markers.addLayer(L.marker([lat,lng]));
-//     }
-// })
-
-// map.addLayer(markers);
 const markers = new L.MarkerClusterGroup();
 
 campgrounds.forEach(campground => {
